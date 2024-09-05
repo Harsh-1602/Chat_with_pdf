@@ -193,6 +193,13 @@ else:
     save_uploadedfile(pdf)
     Settings.llm=llm
     Settings.embed_model=embed_model
+    folder_name = "tempDir"
+
+    # Check if the folder exists
+    if not os.path.exists(folder_name):
+        # Create the folder
+        os.makedirs(folder_name)
+    
     path=f"tempDir/{pdf.name}"
     # pdf="temp/maternity_benefit.pdf"
     # session state
